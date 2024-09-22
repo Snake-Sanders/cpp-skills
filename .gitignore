@@ -37,3 +37,4 @@
 # Keep the build directories by allowing their .gitignore files
 !**/build/.gitignore
 
+.DS_Store
