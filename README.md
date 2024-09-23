@@ -15,7 +15,6 @@ Run with:
 `c++ pointer1.cpp -o pointer1`
 `./pointer`
 
-
 ### Comple with CMake
 
 ```
@@ -60,7 +59,6 @@ int main(void){
 }
 ```
 
-
 * Pointer arguments 
 
 ```c
@@ -79,4 +77,8 @@ int day = 29;
 int* pDay = &day;
 
 cout "Value of day is: " *pDay << endl;
+// 29
+*pDay = 30;
+cout "Value of day is: " *pDay << endl;
+// 30
 ```
