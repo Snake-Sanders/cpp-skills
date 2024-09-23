@@ -51,7 +51,7 @@ void temperatures(int [] values, int length);
 * References arguments
 
 ```c
-void inc_reference(int &value) { value++; }
+void inc_reference(int& value) { value++; }
 
 int main(void){
     int day = 20;
@@ -68,7 +68,7 @@ void inc_reference(const int &value, int& result) {
 * Pointer arguments
 
 ```c
-void inc_pointer(int *value) { (*value)++; }
+void inc_pointer(int* value) { (*value)++; }
 
 int main(void){
     int day = 20;
