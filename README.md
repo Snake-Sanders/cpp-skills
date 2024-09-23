@@ -91,7 +91,8 @@ cout "Value of day is: " *pDay << endl;
 int* pDay = new int;
 *pDay = 9;
 delete pDay;
-`
+```
+
 * allocation and deallocation of multiple elements
 
 ```cpp
