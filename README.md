@@ -82,6 +82,7 @@ cout "Value of day is: " *pDay << endl;
 cout "Value of day is: " *pDay << endl;
 // 30
 ```
+
 ## Dynamic Allocation
 
 * single allocation and deallocation
