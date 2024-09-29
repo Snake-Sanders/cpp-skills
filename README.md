@@ -58,6 +58,13 @@ int main(void){
     inc_reference(day);
 }
 ```
+example with read only and return references
+``` c
+void inc_reference(const int &value, int& result) {
+    result = value + 1;
+}
+```
+
 
 * Pointer arguments 
 
@@ -81,7 +88,39 @@ cout "Value of day is: " *pDay << endl;
 *pDay = 30;
 cout "Value of day is: " *pDay << endl;
 // 30
+
+
+int month = 11;
+const int *pMonth_a = &month;
+// Error: month value can't be changed, it is const int
+//*pMonth_a = 12;
+
+const int *const pMonth_b = &month;
+const int holliday = 6;
+// Error: the pointer cannot be reassigned
+// pMonth_b = &holliday; 
 ```
+
+## References
+
+* a reference must be initialized to a variable at declaration
+```cpp
+int age = 30;
+int& age_ref = age;
+const int& read_only = age;
+
+// cannot assign this reference, the reference type must match its variable  
+// it should be const int& user_age
+//int& user_age = read_only;
+```
+
+A reference, doesn’t act as a separate object or variable. 
+It is more like a direct alias to the original variable. 
+In most cases, the compiler manages this using pointers under the hood, 
+but it is abstracted away so that the reference behaves just like the original 
+variable. 
+Conceptual representation:
+`int* const my_ref = &age;` 
 
 ## Dynamic Allocation
 
@@ -99,3 +138,5 @@ delete pDay;
 int* lottery = new int[6];
 delete[] lotery;
 ```
+
+
