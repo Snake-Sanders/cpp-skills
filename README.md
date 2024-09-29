@@ -125,6 +125,8 @@ Conceptual representation:
 ## Dynamic Allocation
 
 * single allocation and deallocation
+* when multiple pointers reference one memory allocation, only one should call 
+`delete`. Dealocating more than once will cause an error.
 
 ```cpp
 int* pDay = new int;
@@ -139,4 +141,19 @@ int* lottery = new int[6];
 delete[] lotery;
 ```
 
+* differences between array on stack and on heap
+```cpp
+// allocation of 10 integers on stack
+int years[10];
+
+// allocation of 10 pointers to integers on stack
+int *pYears[10];
+
+// allocate 10 ints in heap and assing the address to the pointer
+pYears = new int [10];
+
+// deallocating 10 int memory
+delete[] pYears;
+
+```
 
