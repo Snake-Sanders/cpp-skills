@@ -1,6 +1,6 @@
 # General Concepts
 
-### 1. **Core C++ Concepts**
+## 1. **Core C++ Concepts**
 
 - **Object-Oriented Programming (OOP)**
   - Explain **polymorphism**, **inheritance**, **encapsulation**, and **abstraction**.
@@ -27,7 +27,7 @@
   - Explain **template specialization** and **template metaprogramming**.
   - What is **SFINAE** (Substitution Failure Is Not An Error) in C++?
 
-### 2. **Advanced C++ Concepts**
+## 2. **Advanced C++ Concepts**
 
 - **Concurrency and Multithreading**
   - How do you create **threads** in C++? Explain **std::thread**.
@@ -44,7 +44,7 @@
   - What are **lambda functions** in C++? How do you capture variables?
   - How do you use **lambdas** with **STL algorithms**?
 
-### 3. **Standard Template Library (STL)**
+## 3. **Standard Template Library (STL)**
 
 - **Common Containers**
   - What is the difference between **vector**, **list**, **deque**, **map**, and **set**?
@@ -60,7 +60,7 @@
   - What are **standard exceptions** in C++ (e.g., `std::bad_alloc`, `std::out_of_range`)?
   - What’s the difference between **try-catch blocks** and using **error codes** for error handling?
 
-### 4. **Code Optimization**
+## 4. **Code Optimization**
 
 - **Time Complexity**
   - How do you evaluate the **time complexity** of a program?
@@ -70,7 +70,7 @@
   - How do you reduce memory overhead when working with large data structures?
   - What is the role of **cache locality**, and how can you write cache-friendly code?
 
-### 5. **System Design & Problem Solving**
+## 5. **System Design & Problem Solving**
 
 - **Design Patterns**
   - What are common **design patterns** in C++ (e.g., **Singleton**, **Factory**, **Observer**, **Strategy**)?
@@ -80,8 +80,7 @@
   - What are some **best practices** for writing clean and maintainable C++ code?
   - How would you review code for **memory leaks**, **race conditions**, or **undefined behavior**?
 
-### 6. **Common Coding Challenges**
-Interviewers often ask you to solve problems that test your understanding of data structures and algorithms.
+## 6. **Common Coding Challenges**
 
 - **String Manipulation**
   - Write a function to **reverse a string**.
@@ -100,7 +99,7 @@ Interviewers often ask you to solve problems that test your understanding of dat
 - **Dynamic Programming**
   - Solve the **knapsack problem** or **longest common subsequence** using dynamic programming.
 
-### Resources to Practice
+## Resources to Practice
 
 1. **LeetCode** or **HackerRank**: For practicing algorithms and data structures problems in C++.
 2. **GeeksforGeeks**: A comprehensive resource for learning C++ concepts.
