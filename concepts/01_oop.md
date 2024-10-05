@@ -29,7 +29,7 @@ The diamond problem occurs in **multiple inheritance** when a derived class inhe
 
 # Examples 
 
-## 9. Virtaul inheritance 
+## 9. Virtual inheritance 
 
 ```c++
 class Vehicle {
