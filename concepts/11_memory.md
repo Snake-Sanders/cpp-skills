@@ -49,3 +49,14 @@ Placement new allows the construction of an object at a specific memory address.
 
 ## 10. Memory Alignment
 Memory alignment ensures that data is stored at addresses in memory that are suitable for the architecture. Misaligned memory access can lead to performance penalties or crashes, so C++ provides features like alignas to control alignment.
+
+# Examples
+
+
+## 10. Memory Alignment 
+```cpp
+struct alignas(32) sse_t
+{
+    float sse_data[4];
+};
+```
