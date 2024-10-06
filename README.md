@@ -157,3 +157,8 @@ delete[] pYears;
 
 ```
 
+## References
+
+### Arrays and Pointers
+
+https://www.xitalogy.com/programming/2019/08/15/a-tour-of-cpp-arrays-pointers-and-references-under-the-hood.html
