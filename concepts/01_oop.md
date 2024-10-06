@@ -29,6 +29,46 @@ The diamond problem occurs in **multiple inheritance** when a derived class inhe
 
 # Examples 
 
+## 3. Encapsulation
+
+### Friend Functions
+
+A non-member function can be declared as a friend of a class, 
+granting it access to the class’s private and protected members.
+
+```c++
+class MyClass {
+private:
+    int secretValue;
+public:
+    friend void revealSecret(MyClass& obj);
+};
+
+void revealSecret(MyClass& obj) {
+    std::cout << obj.secretValue;
+}
+```
+
+### Friend Classes
+
+A whole class can be declared a friend of another class,
+allowing all the methods of the friend class to access the private members of 
+the other. 
+
+```c++
+class A {
+private:
+    int hiddenData;
+    friend class B;  // B can access hiddenData
+};
+
+class B {
+public:
+    void accessA(A& a) {
+        std::cout << a.hiddenData;  // Legal access
+    }
+};
+```
 ## 9. Virtual inheritance 
 
 ```c++
