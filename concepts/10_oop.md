@@ -1,4 +1,4 @@
-# **Object-Oriented Programming (OOP)** 
+# Object-Oriented Programming (OOP) 
 
 ## 1. **Polymorphism**
 Polymorphism allows objects of different classes to be treated as objects of a common base class. It enables **method overriding**, where derived classes provide specific implementations of methods that are declared in their base class.
