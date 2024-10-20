@@ -157,6 +157,26 @@ delete[] pYears;
 
 ```
 
+## Conditions
+
+Since C++17 if-statements can also include a short initialization statement 
+that can be used to initialize one or more variables for the if statement.
+
+For example:
+
+```cpp
+int num{7};
+
+if (int v{2 * num}; v > 10) {
+    return v;
+} else {
+    return num;
+}
+// => 14
+```
+
+Note: Any variables created in the initialization cannot be accessed after the end of the if statement.
+
 ## References
 
 ### Arrays and Pointers
