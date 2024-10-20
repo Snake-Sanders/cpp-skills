@@ -177,6 +177,35 @@ if (int v{2 * num}; v > 10) {
 
 Note: Any variables created in the initialization cannot be accessed after the end of the if statement.
 
+## Collections
+
+```cpp
+#include <string>
+#include <array>
+#include <vector>
+
+// arrays have fix size
+std::array<std::string, 3> fruits {"apple", "pear", "tomato"};
+
+// vectors have dynamic size
+std::vector<int> lucky_numbers {22, 32, 17};
+
+// vectors and array have the same access functions
+
+lucky_number[0]; // 22
+lucky_number.at(0); // 22
+lucky_number.empty(); // false
+lucky_number.size(); // 3
+lucky_number.front(); // 22
+lucky_number.back(); // 17
+
+// modifiers
+fruits[0] = "cherry"; // {"cherry", "pear", "tomato"}
+
+lucky_number.pop_back(); // removes 17
+lucky_number.emplace_back(18); // adds 18
+```
+
 ## References
 
 ### Arrays and Pointers
