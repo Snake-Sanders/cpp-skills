@@ -109,6 +109,37 @@ const int holliday = 6;
 | Can modify instance members   | No (can only access static members)       | Yes (can modify non-static members)    |
 | Example usage                 | `Example::getVersion()`                   | `exampleInstance.getName()`            |
 
+### Example
+
+```cpp
+class Example {
+public:
+    // Static member function
+    static string getVersion() {
+        return "1.0";
+    }
+
+    // Const member function
+    string getName() const {
+        return name;
+    }
+
+    // Non-const member function
+    void setName(const string& newName) {
+        name = newName;
+    }
+};
+```
+
+call with
+```cpp
+int main() {
+    const Example example; // `example` is a constant instance
+    example.getName();     // Allowed because `getName` is a const function
+    example.setName("New"); // Not allowed on a const instance
+    string version = Example::getVersion(); // does not require an instance
+    }
+```
 
 ## References
 
