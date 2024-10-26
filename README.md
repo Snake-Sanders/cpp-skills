@@ -42,13 +42,13 @@ int create_user(uint age = 18, uint score = 0);
 int create_user(uint id, uint score = 0);
 ```
 
-* Arrays arguments 
+* Arrays arguments
 
 ```c
 void temperatures(int [] values, int length);
 ```
 
-* References arguments 
+* References arguments
 
 ```c
 void inc_reference(int &value) { value++; }
@@ -65,8 +65,7 @@ void inc_reference(const int &value, int& result) {
 }
 ```
 
-
-* Pointer arguments 
+* Pointer arguments
 
 ```c
 void inc_pointer(int *value) { (*value)++; }
@@ -89,7 +88,6 @@ cout "Value of day is: " *pDay << endl;
 cout "Value of day is: " *pDay << endl;
 // 30
 
-
 int month = 11;
 const int *pMonth_a = &month;
 // Error: month value can't be changed, it is const int
@@ -98,8 +96,19 @@ const int *pMonth_a = &month;
 const int *const pMonth_b = &month;
 const int holliday = 6;
 // Error: the pointer cannot be reassigned
-// pMonth_b = &holliday; 
+// pMonth_b = &holliday;
 ```
+
+## Static Member Functions vs. Non-static Member Functions
+
+| Feature                       | Static Member Function                    | Non-static Member Function             |
+|-------------------------------|-------------------------------------------|----------------------------------------|
+| Belongs to                    | Class itself                              | Individual instances of the class      |
+| Accessed by                   | `ClassName::functionName()`               | `instance.functionName()`              |
+| Has `this` pointer            | No                                        | Yes                                    |
+| Can modify instance members   | No (can only access static members)       | Yes (can modify non-static members)    |
+| Example usage                 | `Example::getVersion()`                   | `exampleInstance.getName()`            |
+
 
 ## References
 
@@ -109,23 +118,23 @@ int age = 30;
 int& age_ref = age;
 const int& read_only = age;
 
-// cannot assign this reference, the reference type must match its variable  
+// cannot assign this reference, the reference type must match its variable
 // it should be const int& user_age
 //int& user_age = read_only;
 ```
 
-A reference, doesn’t act as a separate object or variable. 
-It is more like a direct alias to the original variable. 
-In most cases, the compiler manages this using pointers under the hood, 
-but it is abstracted away so that the reference behaves just like the original 
-variable. 
+A reference, doesn’t act as a separate object or variable.
+It is more like a direct alias to the original variable.
+In most cases, the compiler manages this using pointers under the hood,
+but it is abstracted away so that the reference behaves just like the original
+variable.
 Conceptual representation:
-`int* const my_ref = &age;` 
+`int* const my_ref = &age;`
 
 ## Dynamic Allocation
 
 * single allocation and deallocation
-* when multiple pointers reference one memory allocation, only one should call 
+* when multiple pointers reference one memory allocation, only one should call
 `delete`. Dealocating more than once will cause an error.
 
 ```cpp
@@ -159,7 +168,7 @@ delete[] pYears;
 
 ## Conditions
 
-Since C++17 if-statements can also include a short initialization statement 
+Since C++17 if-statements can also include a short initialization statement
 that can be used to initialize one or more variables for the if statement.
 
 For example:
@@ -176,6 +185,12 @@ if (int v{2 * num}; v > 10) {
 ```
 
 Note: Any variables created in the initialization cannot be accessed after the end of the if statement.
+
+## Casting
+
+```cpp
+static_cast<int>(3.14); // 3
+```
 
 ## Collections
 
