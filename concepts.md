@@ -27,6 +27,9 @@
   - Explain **template specialization** and **template metaprogramming**.
   - What is **SFINAE** (Substitution Failure Is Not An Error) in C++?
 
+- **Function call**
+  - How is the function call and return process.
+
 ## 2. **Advanced C++ Concepts**
 
 - **Concurrency and Multithreading**
