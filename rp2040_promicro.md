@@ -60,6 +60,15 @@ file `.env`:
 
 the load the path as `source .env`
 
+Neovim does not find the imports, fix it by changing 
+CMakeLists.txt
+
+```cmake
+set(PICO_SDK_PATH "/Users/{USER}/src/github/pico-sdk")
+# this creates compile_commands.json needed by neovim
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)  
+```
+
 update the example pin LED. I am using a clone mini version of 
 `sparkfun_promicro`
 
@@ -85,3 +94,5 @@ cd blink
 make -j4
 # plugin Pico with BOOTSEL pressed down to get RPI-RP2
 cp blink.uf2 /Volumes/RPI-RP2
+
+
