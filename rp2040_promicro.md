@@ -23,6 +23,15 @@ then choose for Apply M3:
     macOS (Apple silicon) hosted cross toolchains
     - AArch32 bare-metal target (arm-none-eabi)
 
+> Key Tools Included in the Toolchain:
+>
+> arm-none-eabi-gcc – ARM C/C++ compiler.
+ arm-none-eabi-ld – ARM linker.
+ arm-none-eabi-nm – Symbol listing tool, like nm, but for ARM targets.
+ arm-none-eabi-objcopy – For converting between different binary formats (e.g., ELF to binary).
+ arm-none-eabi-as – Assembler.
+ arm-none-eabi-gdb – Debugger for ARM.
+
 rp2040 is arm 32 bit architecture.
 
 https://developer.arm.com/-/media/Files/downloads/gnu/14.2.rel1/binrel/arm-gnu-toolchain-14.2.rel1-darwin-arm64-arm-none-eabi.pkg
