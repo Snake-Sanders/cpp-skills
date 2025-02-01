@@ -1,3 +1,87 @@
+# Priorities
+
+## Essential Modern C++ Features (Focus on These First)
+
+- Core Language Features
+  - auto keyword
+  - Range-based for loops
+  - Lambda expressions
+  - Smart pointers (unique_ptr, shared_ptr)
+  - Move semantics (basic understanding)
+  - nullptr instead of NULL
+  - override and final keywords
+
+## STL Basics
+  - std::vector, std::array
+  - std::string, std::string_view
+  - Basic algorithms (std::find, std::sort)
+  - std::optional
+
+## Memory Management
+  - RAII principles
+  - Smart pointer usage
+  - Basic memory safety practices
+
+## Good to Know (Second Priority)
+  - Concurrency
+    - std::thread basics
+    - Mutexes and locks
+    - Basic async operations
+  - Modern Container Usage
+    - std::unordered_map/set
+    - std::array vs C arrays
+
+## Usually Not Required (Unless Specifically Needed)
+
+- Advanced Features
+  - Template metaprogramming
+  - Perfect forwarding
+  - SFINAE
+  - Concepts (C++20)
+  - Coroutines
+  - Complex compile-time programming
+
+## Real-World Focus Areas for Embedded/Robotics
+
+- Performance Critical
+  - Understanding memory layout
+  - Cache-friendly code
+  - Real-time constraints
+  - Zero-cost abstractions
+
+## Hardware Interaction
+  - Bit manipulation
+  - Register access
+  - Interrupt handling
+  - DMA operations
+
+## Job Market Reality
+  - Most embedded roles use a subset of C++
+  - Focus is on reliability and maintainability
+  - Many projects use C++11/14 features, fewer use C++17/20
+  - Style guides often restrict language feature usage (like Google's or MISRA)
+
+## Practical Approach
+  - Start With
+    - Learn the "Essential" features listed above
+    - Focus on writing clean, maintainable code
+    - Understand embedded-specific constraints
+
+  - Then Add
+    - Features as needed for specific projects
+    - Performance optimization techniques
+    - Platform-specific requirements
+  - Project-Based Learning
+    - Build small embedded projects
+    - Focus on real hardware interaction
+    - Practice with common microcontrollers
+
+  - Red Flags in Learning
+    - Don't get caught in feature completeness
+    - Avoid premature optimization
+    - Don't use complex features just because they exist
+    - Stay away from "clever" code that's hard to maintain
+
 # General Concepts
 
 ## 1. **Core C++ Concepts**
@@ -107,4 +191,3 @@
 1. **LeetCode** or **HackerRank**: For practicing algorithms and data structures problems in C++.
 2. **GeeksforGeeks**: A comprehensive resource for learning C++ concepts.
 3. **Cppreference**: For official documentation and best practices regarding C++.
-
