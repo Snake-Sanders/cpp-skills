@@ -145,3 +145,14 @@ What are the types of x and y?
 
 getValue() returns an int (by value).
 decltype(getValue()) gives us int, so x is just an int.
+
+```cpp
+int&& foo() { static int x = 10; return std::move(x); }
+decltype(foo()) a = foo();
+```
+What is the type of a?
+
+**Results**
+
+foo() returns an int&& (rvalue reference).
+Since std::move(x) converts x to an rvalue, the return type remains int&&
