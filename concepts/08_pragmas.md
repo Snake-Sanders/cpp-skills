@@ -1,14 +1,15 @@
 # Pragmas
 
-## Pragma once 
+## Pragma once
 
-I modern compilers the processor directive 
+I modern compilers the processor directive pragma once can be used to repalce
+the guards ifdefs.
 
 ```C++
 #pragma once
 ```
 
-
+Old include guards
 
 ```C++
 #ifndef GRANDPARENT_H
@@ -16,4 +17,5 @@ I modern compilers the processor directive
 ... contents of Grandparent.h
 #endif /* !GRANDPARENT_H */
 ```
-https://en.wikipedia.org/wiki/Pragma_once
+
+<https://en.wikipedia.org/wiki/Pragma_once>
