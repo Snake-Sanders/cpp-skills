@@ -1,5 +1,65 @@
 # Concepts
 
+## Quick topic list
+
+Some topics to update to modern C++
+
+- constexpr (and if constexpr)
+- references instead of pointers where pointers aren't required
+- Strong types (enum class, explicit constructors and conversion operators,
+operator overloading)
+- lambdas (understand the difference between capturing and non-capturing,
+and when to use a hand-rolled function object to save code size)
+- templates (being mindful of code size, not to not use them, but use them
+well)
+- virtual functions can be useful, but make sure you actually need runtime
+polymorphism first and be wary of the overhead
+- The acronyms: [N]RVO, RAII, etc
+- #pragma once instead of include guards (it's non standard but it's very well
+supported)
+- namespaces (no more FooComponent_Bar())
+- auto (not the same as C's auto)
+- Range-based for loops
+
+ETL stands for _Embedded Template Library_ <https://www.etlcpp.com/home.html>
+If STD is use instead of ETL, the followings are the highlights for embedded:
+
+- The non-owning views (span, string_view). These are almost a direct upgrade
+over pointer+len or const char* you'd use otherwise.
+- algorithms
+- array is the only usable container unless you want to try pmr::vector etc
+- type_traits open up a lot of more advanced template usage
+- optional (just understand how to use it without either exceptions or UB,
+but really it should only be as scary as a pointer). You can use it to defer
+construction as well as signal a fallible operation.
+- variant and tuple can also come in handy, but the code to use it can be
+unintuitive (visit and apply respectively).
+
+Things in the std to avoid (not an exhaustive list):
+
+- Dynamic containers (vector, string, map, etc). I recommend writing your own or
+grabbing some that work using a fixed memory buffer, styled off the std
+classes. Every time a class has an array and a count as members it's basically
+re-implementing that vector class, so you might as well write it once.
+
+- function - may allocate. To pass lambdas, use a function pointer if you're
+happy to limit it to non-capturing lambdas, otherwise use a template (see
+algorithms for examples)
+
+- stream IO. Unless you can get format, just stick to the C library for this one.
+
+Good resources/tools:
+
+- CppReference
+- Godbolt: Compiler explorer online
+<https://godbolt.org/>
+
+- CppInsights
+- clang-tidy/clang-format/etc (analysis tooling)
+in place, C++ has more footguns than C so do yourself a favour and let the
+machine catch some of them).
+- `-O2 -Wall -Wpedantic -fno-exceptions -fno-rtti` (or equivalent)
+
 ## Priorities
 
 ### Essential Modern C++ Features (Focus on These First)
@@ -224,4 +284,3 @@ structures problems in C++.
 3. **Cppreference**: For official documentation and best practices regarding C++.
 4. Using C++ in Embedded Superloop (Amazon drone). CppConf 2022
 <https://www.youtube.com/watch?v=QwDUJYLCpxo>
-5. ETL Embedded Template Library <https://www.etlcpp.com/home.html>
