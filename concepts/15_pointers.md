@@ -1,3 +1,5 @@
+# Pointers
+
 ## Nullptr
 
 > Since C++11
@@ -56,7 +58,6 @@ void test(std::nullptr_t) {
 ```
 
 then `nullptr_t` will be printed
-=======
 
 Before C++11, NULL was just 0, which could cause issues. Now, we use nullptr
 
@@ -84,8 +85,8 @@ if (buffer == nullptr) {
     // Allocate memory or handle error
 }
 
-
 ```
+
 ## unique_ptr
 
 Use `unique_ptr` in combined with `make_unique` instead of using `new`
@@ -127,8 +128,73 @@ as it offers lightweight memory management without the overhead of reference cou
 `shared_ptr` should be used sparingly, as it introduces overhead and
 complexity unless true shared ownership is needed.
 
-```cpp
-```
+## Example
+
+// power_of_troy.h
 
 ```cpp
+#pragma once
+
+#include <memory>
+#include <string>
+
+namespace troy {
+
+struct artifact {
+  // constructors needed (until C++20)
+  artifact(std::string name) : name(name) {}
+  std::string name;
+};
+
+struct power {
+  // constructors needed (until C++20)
+  power(std::string effect) : effect(effect) {}
+  std::string effect;
+};
+
+struct human {
+  human() {}
+
+  std::unique_ptr<artifact> possession;
+  std::shared_ptr<power> own_power;
+  std::shared_ptr<power> influenced_by;
+};
+
+void give_new_artifact(human &human, std::string name);
+void exchange_artifacts(std::unique_ptr<artifact> &x,
+                        std::unique_ptr<artifact> &y);
+void manifest_power(human &human, std::string name);
+void use_power(human &caster, human &target);
+long power_intensity(human &human);
+
+} // namespace troy
+```
+
+// power_of_troy.cpp
+
+```cpp
+#include "power_of_troy.h"
+
+namespace troy {
+
+void give_new_artifact(human &human, std::string name) {
+  human.possession = std::make_unique<artifact>(name);
+}
+
+void exchange_artifacts(std::unique_ptr<artifact> &x,
+                        std::unique_ptr<artifact> &y) {
+  x.swap(y);
+}
+
+void manifest_power(human &human, std::string name) {
+  human.own_power = std::make_unique<power>(power(name));
+}
+
+void use_power(human &caster, human &target) {
+  target.influenced_by = caster.own_power;
+}
+
+long power_intensity(human &human) { return human.own_power.use_count(); }
+} // namespace troy
+
 ```
