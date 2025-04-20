@@ -198,3 +198,13 @@ long power_intensity(human &human) { return human.own_power.use_count(); }
 } // namespace troy
 
 ```
+
+## Smart pointers comparison with Rust
+
+|C++ | Rust|
+|-|-|
+|std::unique_ptr | Box<T> or default ownership |
+|std::shared_ptr | Rc<T> / Arc<T> |
+|Dereferencing *ptr | Same, *ref |
+|std::move() | let x = y; (moves in Rust) |
+|const T*vs T* | &T vs &mut T |
