@@ -2,8 +2,8 @@
 
 ## Pragma once
 
-I modern compilers the processor directive pragma once can be used to repalce
-the guards ifdefs.
+I modern compilers the processor directive pragma once can be used to replace
+the file inclusio guards "ifdefs".
 
 ```C++
 #pragma once
