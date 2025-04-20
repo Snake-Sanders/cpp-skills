@@ -269,6 +269,15 @@ machine catch some of them).
   - Solve the **knapsack problem** or **longest common subsequence** using
   dynamic programming.
 
+
+### Resources 
+
+## Books
+
+Curated list of best books on C++ on stack overflow
+
+https://stackoverflow.com/questions/388242/the-definitive-c-book-guide-and-list
+
 ## Example code
 
 - Examples:
@@ -276,7 +285,7 @@ machine catch some of them).
 - Smartwatch Open source by PineTime. Pine64:
 <https://github.com/InfiniTimeOrg/InfiniTime>
 
-### Resources to Practice
+## to Practice
 
 1. **LeetCode** or **HackerRank**: For practicing algorithms and data
 structures problems in C++.
