@@ -56,11 +56,10 @@ int main() {
         std::cout << name << ": " << score << "\n";
     // Alice: 55, Bob: 72, Charlie: 40
 }
-
 ```
 
 How update iterator works.
-The key detail is the `&` in auto &[names, score]. 
+The key detail is the `&` in auto &[names, score].
 Here's what's happening:
 The `&` creates a reference to each element in `scores`.
 When using structured binding [names, score] with a reference, both names

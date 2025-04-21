@@ -269,14 +269,13 @@ machine catch some of them).
   - Solve the **knapsack problem** or **longest common subsequence** using
   dynamic programming.
 
-
-### Resources 
+### Resources
 
 ## Books
 
 Curated list of best books on C++ on stack overflow
 
-https://stackoverflow.com/questions/388242/the-definitive-c-book-guide-and-list
+<https://stackoverflow.com/questions/388242/the-definitive-c-book-guide-and-list>
 
 ## Example code
 
