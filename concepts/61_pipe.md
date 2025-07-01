@@ -1,4 +1,4 @@
-## Pipe operator
+# Pipe operator
 
 C++ doesn't have built-in pipe operators like Elixir (`|>`) or Rust
 (method chaining), but there are several functional approaches:
