@@ -1,4 +1,4 @@
-# Fold Expresion
+# Fold Expression
 
 ## Fold Expression Formula
 
